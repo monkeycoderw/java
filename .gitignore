@@ -1,0 +1,10 @@
+*.swp
+*.swo
+*.metadata/*
+*.RemoteSystemsTempFiles/*
+*.recommenders/
+*/bin/*
+*.classpath
+*.project
+*/.settings/*
+
