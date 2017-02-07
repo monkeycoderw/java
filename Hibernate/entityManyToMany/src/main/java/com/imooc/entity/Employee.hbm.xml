@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-2-7 21:07:07 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.imooc.entity.Employee" table="employee">
+        <id name="empid" type="int">
+            <column name="empid" />
+            <generator class="assigned" />
+        </id>
+        <property name="empname" type="java.lang.String">
+            <column name="empname" length="20" not-null="true" />
+        </property>
+        <set name="projects" table="proemp">
+            <key>
+                <column name="rempid" />
+            </key>
+            <many-to-many class="com.imooc.entity.Project" column="rproid" />
+        </set>
+    </class>
+</hibernate-mapping>

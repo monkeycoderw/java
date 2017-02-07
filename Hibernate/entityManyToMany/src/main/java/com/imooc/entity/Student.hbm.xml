@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-2-7 12:06:18 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.imooc.entity.Student" table="student">
+        <id name="sid" type="int">
+            <column name="sid" />
+            <generator class="increment" />
+        </id>
+        <property name="sname" type="java.lang.String">
+            <column name="sname" />
+        </property>
+        <property name="sex" type="java.lang.String">
+            <column name="sex" />
+        </property>
+        <many-to-one name="grade" class="com.imooc.entity.Grade">
+            <column name="gid" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
